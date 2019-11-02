@@ -13,7 +13,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +32,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://dmb-2222.github.io/goit-react14-hw-02-bank-account"
+  "homepage": "https://dmb-2222.github.io/goit-react14-hw-03-image-finder",
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
+  }
 }

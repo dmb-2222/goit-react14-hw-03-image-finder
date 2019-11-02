@@ -50,14 +50,6 @@ class AppPhoto extends React.Component {
     window.removeEventListener("keydown", this.onCloseModal);
   }
   onCloseModal = e => {
-    // console.log(e.target.getAttribute('data-modal')) не использовать в реакте
-    // e.target.getAttribute('name')) не использовать в реакте
-    // console.log("e.currentTarget.dataset.modal", e.currentTarget.dataset.modal);
-    // console.log("e.target.dataset.modal", e.target.dataset.modal); То что заработало!!!!!
-    // console.log(e.currentTarget.attributes['name'])
-    // event.target - элемент, на котором произошло событие.
-    // event.currentTarget - элемент, на котором сработал обработчик.
-
     if (e.code === "Escape" || e.target.dataset.modal === "modal") {
       this.setState({
         isModalOpen: false
