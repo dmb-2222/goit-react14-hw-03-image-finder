@@ -13,7 +13,8 @@ class AppPhoto extends React.Component {
     btnLoadmore: false,
     inputValue: null,
     value: "",
-    spiner: false
+    spiner: false,
+    stepScrol: 1050
   };
   nextPage = 1;
   componentDidMount() {
@@ -35,8 +36,11 @@ class AppPhoto extends React.Component {
         });
       })
       .then(() => {
-        const scrollToEnd = document.getElementById("scroll");
-        scrollToEnd.scrollIntoView({ behavior: "smooth" });
+        const scrol = document.body.scrollHeight - window.innerHeight - 300;
+        window.scrollTo({
+          top: scrol,
+          behavior: "smooth"
+        });
       });
   };
 

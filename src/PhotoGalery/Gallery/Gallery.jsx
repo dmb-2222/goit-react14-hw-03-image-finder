@@ -24,7 +24,6 @@ const Gallery = ({
           Load more
         </button>
       )}
-      <div id="scroll" />
     </>
   );
 };

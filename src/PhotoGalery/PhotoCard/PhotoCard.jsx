@@ -24,7 +24,7 @@ const PhotoCard = ({webformatURL,tags, likes, comments ,views, downloads, ckickT
         </p>
       </div>
       <button type="button" className="fullscreen-button" onClick={ckickToOpenModal}>
-        <i className="material-icons">zoom_out_map</i>
+        <i className="material-icons">Нажми для увеличения</i>
       </button>
     </li>
   );
