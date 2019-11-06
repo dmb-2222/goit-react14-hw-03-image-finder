@@ -14,7 +14,6 @@ class AppPhoto extends React.Component {
     inputValue: null,
     value: "",
     spiner: false,
-    stepScrol: 1050
   };
   nextPage = 1;
   componentDidMount() {
