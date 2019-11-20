@@ -1,14 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styles from './Modal.module.css'
+
 const Modal = ({ largeImageURL, tags, onCloseModal }) => {
   return (
     <div
-      className="overlay"
+      className={styles.overlay}
       onClick={onCloseModal}
       data-modal="modal"
       name="modal"
     >
-      <div className="modal">
+      <div className={styles.modal}>
         <img src={largeImageURL} alt={tags} />
       </div>
     </div>

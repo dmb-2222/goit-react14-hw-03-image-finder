@@ -1,8 +1,8 @@
 import React from "react";
-
+import styles from './SearchForm.module.css'
 const SearchForm = ({ handleInput, handeleSubmit, value }) => {
   return (
-    <form className="search-form" onSubmit={handeleSubmit}>
+    <form className={styles.searchForm} onSubmit={handeleSubmit}>
       <input
         type="text"
         autoComplete="off"

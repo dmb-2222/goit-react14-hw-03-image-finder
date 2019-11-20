@@ -1,6 +1,7 @@
 import React from "react";
 import PhotoCard from "../PhotoCard/PhotoCard";
 import PropTypes from "prop-types";
+import styles from './Gallery.module.css'
 
 const Gallery = ({
   hits,
@@ -10,7 +11,7 @@ const Gallery = ({
 }) => {
   return (
     <>
-      <ul className="gallery">
+      <ul className={styles.gallery}>
         {hits.map(hit => (
           <PhotoCard
             key={hit.id}
@@ -20,7 +21,7 @@ const Gallery = ({
         ) )}
       </ul>
       {showButtonloadMore && (
-        <button className="button" type="button" onClick={handleBtnLoadMore}>
+        <button className={styles.button} type="button" onClick={handleBtnLoadMore}>
           Load more
         </button>
       )}

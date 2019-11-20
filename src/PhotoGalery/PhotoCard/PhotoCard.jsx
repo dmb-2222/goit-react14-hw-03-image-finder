@@ -1,36 +1,48 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import styles from "./PhotoCard.module.css";
 
-const PhotoCard = ({webformatURL,tags, likes, comments ,views, downloads, ckickToOpenModal}) => {
+const PhotoCard = ({
+  webformatURL,
+  tags,
+  likes,
+  comments,
+  views,
+  downloads,
+  ckickToOpenModal
+}) => {
   return (
-    <li className="photo-card">
+    <li className={styles.photoCard}>
       <img src={webformatURL} alt={tags} />
-      <div className="stats">
-        <p className="stats-item">
+      <div className={styles.stats}>
+        <p className={styles.statsItem}>
           <i className="material-icons">thumb_up</i>
           {likes}
         </p>
-        <p className="stats-item">
+        <p className={styles.statsItem}>
           <i className="material-icons">visibility</i>
           {views}
         </p>
-        <p className="stats-item">
+        <p className={styles.statsItem}>
           <i className="material-icons">comment</i>
           {comments}
         </p>
-        <p className="stats-item">
+        <p className={styles.statsItem}>
           <i className="material-icons">cloud_download</i>
           {downloads}
         </p>
       </div>
-      <button type="button" className="fullscreen-button" onClick={ckickToOpenModal}>
-        <i className="material-icons">Нажми для увеличения</i>
+      <button
+        type="button"
+        className={styles.fullscreenButton}
+        onClick={ckickToOpenModal}
+      >
+        <i className="material-icons">zoom_out_map</i>
       </button>
     </li>
   );
 };
 export default PhotoCard;
-
 
 PhotoCard.propTypes = {
   webformatURL: PropTypes.string.isRequired,
@@ -38,5 +50,5 @@ PhotoCard.propTypes = {
   views: PropTypes.number.isRequired,
   comments: PropTypes.number.isRequired,
   downloads: PropTypes.number.isRequired,
-  clickToOpenModal: PropTypes.func,
-}
+  clickToOpenModal: PropTypes.func
+};
