@@ -13,7 +13,7 @@ class AppPhoto extends React.Component {
     btnLoadmore: false,
     inputValue: null,
     value: "",
-    spiner: false,
+    spiner: false
   };
   nextPage = 1;
   componentDidMount() {
@@ -36,6 +36,7 @@ class AppPhoto extends React.Component {
       })
       .then(() => {
         const scrol = document.body.scrollHeight - window.innerHeight - 300;
+        // использовать рефы Доделать задание!!!!
         window.scrollTo({
           top: scrol,
           behavior: "smooth"
